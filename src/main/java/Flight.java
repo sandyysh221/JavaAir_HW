@@ -59,4 +59,12 @@ public class Flight {
     public int getPassengerCount() {
         return passengers.size();
     }
+
+    public void addCabinCrewMember(CabinCrewMember cabinCrewMember) {
+        cabinCrewMembers.add(cabinCrewMember);
+    }
+
+    public int getCabinCrewMemberCount() {
+        return cabinCrewMembers.size();
+    }
 }

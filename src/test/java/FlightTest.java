@@ -1,13 +1,14 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
 
     Flight flight;
     Pilot pilot;
-    Plane plane;
 
     @Before
     public void before() {
@@ -65,5 +66,19 @@ public class FlightTest {
         flight.addPassenger(passenger2);
         assertEquals(2, flight.getPassengerCount());
         assertEquals(178, flight.getNumberOfAvailableSeats());
+    }
+
+    @Test
+    public void canGetNumberOfCabinCrewMembers() {
+        assertEquals(0, flight.getCabinCrewMemberCount());
+    }
+
+    @Test
+    public void canAddCabinCrewMember() {
+        CabinCrewMember cabinCrewMember1 = new CabinCrewMember("Clare", Rank.FIRST_OFFICER);
+        CabinCrewMember cabinCrewMember2 = new CabinCrewMember("Josie", Rank.PURSER);
+        flight.addCabinCrewMember(cabinCrewMember1);
+        flight.addCabinCrewMember(cabinCrewMember2);
+        assertEquals(2, flight.getCabinCrewMemberCount());
     }
 }

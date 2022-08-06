@@ -32,4 +32,8 @@ public class Pilot {
     public void setLicenseNumber(String licenseNumber) {
         this.licenseNumber = licenseNumber;
     }
+
+    public String flyPlane() {
+        return "This is your captain speaking.";
+    }
 }

@@ -22,4 +22,8 @@ public class CabinCrewMember {
     public void setRank(Rank rank) {
         this.rank = rank;
     }
+
+    public String relayMessages() {
+        return "We'll be handing out lunch in a moment.";
+    }
 }
